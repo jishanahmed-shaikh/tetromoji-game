@@ -1,6 +1,6 @@
 # TETROMOJI
 
-![TETROMOJI icon](assets/icon.png)
+<img src="assets/icon.png" alt="TETROMOJI icon" width="96" />
 
 A tiny bitmoji-faced Tetris, built as a Snapchat Web Lens.
 
