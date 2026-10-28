@@ -14,6 +14,20 @@ const PIECE_STYLE: Record<PieceType, { color: string; face: Expression }> = {
   L: { color: '#ffa552', face: 'heart' },
 };
 
+const bgImg = new Image();
+let bgReady = false;
+bgImg.onload = () => { bgReady = true; };
+bgImg.src = 'assets/bg.jpg';
+
+export function drawBackdrop(ctx: CanvasRenderingContext2D): void {
+  if (bgReady) {
+    ctx.drawImage(bgImg, 0, 0, BOARD_W, BOARD_H);
+  } else {
+    ctx.fillStyle = '#140a28';
+    ctx.fillRect(0, 0, BOARD_W, BOARD_H);
+  }
+}
+
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number): void {
   ctx.beginPath();
   ctx.moveTo(x + r, y);
@@ -167,8 +181,7 @@ function pillButton(ctx: CanvasRenderingContext2D, cx: number, cy: number, text:
 }
 
 export function drawTitle(ctx: CanvasRenderingContext2D): void {
-  ctx.fillStyle = '#140a28';
-  ctx.fillRect(0, 0, BOARD_W, BOARD_H);
+  drawBackdrop(ctx);
 
   const cx = BOARD_W / 2;
   const logoCy = 420;

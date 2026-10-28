@@ -1,7 +1,7 @@
 import { step, type LoopHooks } from './game/loop';
 import { createGame, BOARD_W, BOARD_H } from './game/state';
 import { Input } from './game/input';
-import { drawBoard, drawGameOver, drawHud, drawTitle } from './render/draw';
+import { drawBackdrop, drawBoard, drawGameOver, drawHud, drawTitle } from './render/draw';
 import { Sound } from './audio/sound';
 import { Profile } from './snap/profile';
 
@@ -84,8 +84,7 @@ function frame(now: number): void {
   if (state.phase === 'TITLE') {
     drawTitle(ctx);
   } else {
-    ctx.fillStyle = '#140a28';
-    ctx.fillRect(0, 0, BOARD_W, BOARD_H);
+    drawBackdrop(ctx);
     drawHud(ctx, state);
     drawBoard(ctx, state);
     if (state.phase === 'GAME_OVER') drawGameOver(ctx, state, profile.best);

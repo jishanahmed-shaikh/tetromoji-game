@@ -41,5 +41,6 @@ npm test
   fallback outside Snapchat.
 - `src/main.ts` — the only file touching the DOM: canvas fit, pointer events, the game loop.
 
-No image or audio assets beyond `assets/icon.png` (the Lens Icon upload) — everything else is
-drawn or synthesized in code.
+`assets/bg.jpg` is the only art asset — a generated backdrop drawn behind the procedural board
+and pieces. `assets/icon.png` is the separate Lens Icon upload. Everything else is drawn or
+synthesized in code.

@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { extname, join } from 'node:path';
 
 const root = process.argv[2] ?? 'dist';
-const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.mp3': 'audio/mpeg' };
+const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.mp3': 'audio/mpeg' };
 
 function findPort(start, cb) {
   const srv = createServer();

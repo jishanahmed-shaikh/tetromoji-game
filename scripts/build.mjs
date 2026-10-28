@@ -5,8 +5,9 @@ import esbuild from 'esbuild';
 const watch = process.argv.includes('--watch');
 
 rmSync('dist', { recursive: true, force: true });
-mkdirSync('dist', { recursive: true });
+mkdirSync('dist/assets', { recursive: true });
 cpSync('index.html', 'dist/index.html');
+cpSync('assets/bg.jpg', 'dist/assets/bg.jpg');
 
 if (!watch) {
   console.log('[build] type-checking...');
