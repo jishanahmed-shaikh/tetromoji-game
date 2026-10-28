@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>TETROMOJI</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241046'/%3E%3Crect x='14' y='14' width='16' height='16' rx='4' fill='%23ff5ab0'/%3E%3Crect x='32' y='14' width='16' height='16' rx='4' fill='%2347e0c2'/%3E%3Crect x='14' y='32' width='16' height='16' rx='4' fill='%23ffd166'/%3E%3Crect x='32' y='32' width='16' height='16' rx='4' fill='%236aa6ff'/%3E%3C/svg%3E" />
+    <style>
+      :root { color-scheme: dark; }
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #140a28; touch-action: none; }
+      #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #140a28; }
+      #game-canvas { width: 100%; height: 100%; max-width: 100vh; image-rendering: optimizeSpeed; touch-action: none; }
+    </style>
+  </head>
+  <body>
+    <div id="stage"><canvas id="game-canvas"></canvas></div>
+    <script src="main.js"></script>
+  </body>
+</html>
