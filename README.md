@@ -4,6 +4,8 @@
 
 A tiny bitmoji-faced Tetris, built as a Snapchat Web Lens.
 
+**Play it live on Snapchat:** https://www.snapchat.com/lens/56445d28d8dd4408bada88dea3a3d9b4?utm=qr
+
 ## Play
 
 Drag to slide the falling piece, tap to rotate, swipe down to slam it into place. Clear lines,
